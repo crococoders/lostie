@@ -1,0 +1,23 @@
+{
+  "name": "lostie",
+  "version": "1.0.0",
+  "description": "Lost and Found client-server application",
+  "main": "src/app.ts",
+  "repository": "git@github.com:crococoders/lostie.git",
+  "author": "crococoders",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^18.11.17",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1"
+  },
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start:dev": "yarn nodemon",
+    "start": "yarn build && node build/index.js"
+  }
+}
