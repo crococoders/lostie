@@ -1,21 +1,30 @@
 {
   "name": "lostie",
   "version": "0.0.0",
-  "description": "Monorepo for Lostie application",
-  "main": "index.js",
-  "repository": "git@github.com:crococoders/lostie.git",
-  "author": "crococoders",
-  "license": "MIT",
   "private": true,
+  "description": "Monorepo for Lostie application",
+  "repository": "git@github.com:crococoders/lostie.git",
+  "license": "MIT",
+  "author": "crococoders",
+  "main": "index.js",
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-lerna-scopes"
+    ]
+  },
+  "lint-staged": {
+    "**/*.ts": "eslint --no-ignore --cache --max-warnings 0"
+  },
   "eslintIgnore": [
     "**/node_modules"
   ],
-  "lint-staged": {
-    "**/*.{ts}": "eslint --no-ignore --cache --max-warnings 0"
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
@@ -28,14 +37,5 @@
     "lerna": "^6.1.0",
     "prettier": "2.8.1",
     "typescript": "^4.9.4"
-  },
-  "scripts": {
-    "prepare": "husky install"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional",
-      "@commitlint/config-lerna-scopes"
-    ]
   }
 }
