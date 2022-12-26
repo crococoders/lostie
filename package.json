@@ -11,6 +11,19 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/config-lerna-scopes": "^17.2.1",
+    "husky": "^8.0.0",
     "lerna": "^6.1.0"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-lerna-scopes"
+    ]
   }
 }
