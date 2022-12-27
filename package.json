@@ -1,0 +1,16 @@
+{
+  "name": "lostie",
+  "version": "0.0.0",
+  "description": "Monorepo for Lostie application",
+  "main": "index.js",
+  "repository": "git@github.com:crococoders/lostie.git",
+  "author": "crococoders",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.1.0"
+  }
+}
