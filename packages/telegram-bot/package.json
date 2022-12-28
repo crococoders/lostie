@@ -8,6 +8,7 @@
     "dev": "nodemon",
     "start": "yarn build && node dist/server.js",
     "test": "yarn build && jest",
+    "test:coverage": "yarn test -- --coverage --collectCoverageFrom=\"./src/**\"",
     "test:watch": "yarn build && jest --watch"
   },
   "devDependencies": {
