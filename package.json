@@ -16,6 +16,7 @@
     "build": "lerna run build --stream",
     "prepare": "husky install",
     "test": "yarn build && jest",
+    "test:coverage": "yarn test -- --coverage --collectCoverageFrom=\"./packages/**/src/**\"",
     "test:watch": "yarn build && jest --watch"
   },
   "commitlint": {
