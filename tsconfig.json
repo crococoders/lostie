@@ -39,5 +39,6 @@
       "es2018"
     ]
   },
+  "include": [],
   "exclude": ["**/node_modules"]
 }
