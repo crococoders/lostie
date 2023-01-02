@@ -2,7 +2,7 @@
   "watch": ["src"],
   "ext": "ts,js,json",
   "ignore": ["coverage"],
-  "exec": "tsc && ts-node ./src/server.ts",
+  "exec": "tsc && ts-node ./src/index.ts",
   "restartable": "rs",
   "env": {
     "NODE_ENV": "development"
