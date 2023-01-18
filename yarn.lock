@@ -4269,9 +4269,9 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
 
 grammy@^1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.13.0.tgz#14305bdd12c1454e1f8773fe066bca3c1d5291d8"
-  integrity sha512-3C9ClsH05NogyZ68MXGDjS3rsieIWsEfx904CR48cfwG1m8fAgSLRi2HLuZOF6HPMEHsyYFwjtvOU312QcADdw==
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.13.1.tgz#f55defc1066d41351b6c8160a3d68c83a9102d19"
+  integrity sha512-kAxja6QDjw5oTJOFtrqhaQlLfCco3AwO4Mb4YRdP8A+v59roJA8mgEd0S5dOgFPyn74bPp8VWaKCI+of8wnPow==
   dependencies:
     "@grammyjs/types" "^2.11.0"
     abort-controller "^3.0.0"
