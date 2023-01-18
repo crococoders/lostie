@@ -322,9 +322,9 @@
     conventional-changelog-conventionalcommits "^5.0.0"
 
 "@commitlint/config-lerna-scopes@^17.2.1":
-  version "17.4.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-17.4.0.tgz#6fdee2442b71c6fd455a3bc4be23ee3271783ecd"
-  integrity sha512-On2/C02BUVDUjlypu15B9y1rdIb2pYdcc3CSDuVIMae5fhvTqZqRozfIDIodFXda4o+iG8Ae19kqFwG+Wz4VAA==
+  version "17.4.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-17.4.2.tgz#6979712c39d7c1bd01781f01ca7597dea8105126"
+  integrity sha512-uqunHW7LWBkjEflRAxmzlNu4l3n6Yh/W4EN7eUs404dNj8jhX/K05/ZcFq9i7KzadVp70MUIpZEXfWBTqR9Jyg==
   dependencies:
     glob "^8.0.3"
     import-from "4.0.0"
@@ -6760,13 +6760,6 @@ semver@7.3.4:
   version "7.3.4"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.4.tgz#27aaa7d2e4ca76452f98d3add093a72c943edc97"
   integrity sha512-tCfb2WLjqFAtXn4KEdxIhalnRtoKFN7nAwj0B3ZXCbQloV2tq5eDbcTmT68JJD3nRJq24/XgxtQKFIpQdtvmVw==
-  dependencies:
-    lru-cache "^6.0.0"
-
-semver@7.3.7:
-  version "7.3.7"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.7.tgz#12c5b649afdbf9049707796e22a4028814ce523f"
-  integrity sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==
   dependencies:
     lru-cache "^6.0.0"
 
