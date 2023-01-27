@@ -6,11 +6,11 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/"
+    directory: '/'
     schedule:
       interval: weekly
-      day: "wednesday"
-      time: "04:00"
+      day: 'wednesday'
+      time: '04:00'
       timezone: Europe/London
     open-pull-requests-limit: 20
     reviewers:

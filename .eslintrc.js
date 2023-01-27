@@ -24,6 +24,7 @@ module.exports = {
     'import/no-unresolved': 'error',
     'no-console': 'off',
     'import/prefer-default-export': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'import/order': [
       'error',
       {
