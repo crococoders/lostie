@@ -11,7 +11,6 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "strict": true /* Enable all strict type-checking options. */,
-    "noImplicitAny": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "strictNullChecks": true,
