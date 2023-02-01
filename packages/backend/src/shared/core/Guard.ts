@@ -52,9 +52,9 @@ export class Guard {
         succeeded: false,
         message: `${argumentName} is null or undefined`,
       };
-    } else {
-      return { succeeded: true };
     }
+
+    return { succeeded: true };
   }
 
   public static againstNullOrUndefinedBulk(args: GuardArgumentCollection): GuardResult {
@@ -67,35 +67,29 @@ export class Guard {
   }
 
   public static isOneOf(value: any, validValues: any[], argumentName: string): GuardResult {
-    let isValid = false;
     for (const validValue of validValues) {
       if (value === validValue) {
-        isValid = true;
+        return { succeeded: true };
       }
     }
 
-    if (isValid) {
-      return { succeeded: true };
-    } else {
-      return {
-        succeeded: false,
-        message: `${argumentName} isn't oneOf the correct types in ${JSON.stringify(
-          validValues,
-        )}. Got "${value}".`,
-      };
-    }
+    return {
+      succeeded: false,
+      message: `${argumentName} isn't oneOf the correct types in ${JSON.stringify(
+        validValues,
+      )}. Got "${value}".`,
+    };
   }
 
   public static inRange(num: number, min: number, max: number, argumentName: string): GuardResult {
     const isInRange = num >= min && num <= max;
-    if (!isInRange) {
-      return {
-        succeeded: false,
-        message: `${argumentName} is not within range ${min} to ${max}.`,
-      };
-    } else {
+    if (isInRange) {
       return { succeeded: true };
     }
+    return {
+      succeeded: false,
+      message: `${argumentName} is not within range ${min} to ${max}.`,
+    };
   }
 
   public static allInRange(

@@ -21,7 +21,7 @@ export class Result<T> {
   }
 
   public getValue(): T {
-    if (!this.isSuccess || !this._value) {
+    if (!this.isSuccess || this._value !== null || this._value !== undefined) {
       throw new Error("Can't get the value of an error result. Use 'errorValue' instead.");
     }
 
@@ -83,7 +83,7 @@ export class Right<L, A> {
 }
 
 export const left = <L, A>(l: L): Either<L, A> => {
-  return new Left(l);
+  return new Left<L, A>(l);
 };
 
 export const right = <L, A>(a: A): Either<L, A> => {
