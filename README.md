@@ -4,7 +4,10 @@
 
 `Lostie` - document search aggregator for those who lost or found any personal document. The main idea is to help people with the search for the documents that they have lost. Currently, we support the following document types: Passport, National ID, Driver License, Bank Card. Please create issue if you have any suggestion for new document type.
 
-## Documentation
+## Documentation 
+
+- The event storming details are located in [Miro board](https://miro.com/app/board/uXjVP99l3a8=/?share_link_id=985749745364). 
+![image](https://user-images.githubusercontent.com/31484186/216665570-41543940-f206-43de-98a7-4ea8ce8a55db.png)
 
 - The event storming details are located in [Miro board](https://miro.com/app/board/uXjVP99l3a8=/?share_link_id=985749745364) (a bit outdated, will be replaced soon).
   ![Screenshot 2023-01-12 at 09 12 03](https://user-images.githubusercontent.com/28972348/211967034-5167b516-3f21-4b09-8516-ed2ecb3cb953.png)
