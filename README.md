@@ -6,6 +6,9 @@
 
 ## Documentation
 
+- The event storming details are located in [Miro board](https://miro.com/app/board/uXjVP99l3a8=/?share_link_id=985749745364).
+![image](https://user-images.githubusercontent.com/31484186/216665570-41543940-f206-43de-98a7-4ea8ce8a55db.png)
+
 - The event storming details are located in [Miro board](https://miro.com/app/board/uXjVP99l3a8=/?share_link_id=985749745364) (a bit outdated, will be replaced soon).
   ![Screenshot 2023-01-12 at 09 12 03](https://user-images.githubusercontent.com/28972348/211967034-5167b516-3f21-4b09-8516-ed2ecb3cb953.png)
 
