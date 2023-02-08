@@ -7,7 +7,7 @@
 ## Documentation
 
 - The event storming details are located in [Miro board](https://miro.com/app/board/uXjVP99l3a8=/?share_link_id=985749745364).
-![image](https://user-images.githubusercontent.com/31484186/216665570-41543940-f206-43de-98a7-4ea8ce8a55db.png)
+<img width="1584" alt="image" src="https://user-images.githubusercontent.com/31484186/217529663-fc4ecc37-368e-46db-be91-988f293ab355.png">
 
 - An information about database tables and relationships you can find [here](https://dbdiagram.io/d/63a0735699cb1f3b55a246b0).
 
