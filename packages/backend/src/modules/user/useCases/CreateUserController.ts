@@ -14,7 +14,7 @@ export class CreateUserController extends BaseController {
 
   async executeImpl(req: Request, res: Response): Promise<any> {
     const dto: CreateUserDTO = {
-      chatId: req.body.chatId,
+      userId: req.body.userId,
       fullName: req.body.fullName ? req.body.fullName : null,
       phoneNumber: req.body.phoneNumber ? req.body.phoneNumber : null,
     };

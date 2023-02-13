@@ -1,6 +1,5 @@
 import { UserId } from './UserId';
 import { UserPhoneNumber } from './UserPhoneNumber';
-import { UniqueEntityID } from '../../../shared/domain/UniqueEntityID';
 import { AggregateRoot } from '../../../shared/domain/AggregateRoot';
 import { Guard } from '../../../shared/core/Guard';
 import { Result } from '../../../shared/core/Result';
@@ -8,17 +7,13 @@ import { Result } from '../../../shared/core/Result';
 export interface UserProps {
   fullName?: string;
   phoneNumber?: UserPhoneNumber;
-  chatId: string;
+  id: string;
   isActive?: boolean;
 }
 
 export class User extends AggregateRoot<UserProps> {
   get userId(): UserId {
     return UserId.create(this.id).getValue();
-  }
-
-  get chatId(): string {
-    return this.props.chatId;
   }
 
   // TODO: check grammy api for optional fields
@@ -34,8 +29,8 @@ export class User extends AggregateRoot<UserProps> {
     return this.props.isActive ?? false;
   }
 
-  private constructor(props: UserProps, id?: UniqueEntityID) {
-    super(props, id);
+  private constructor(props: UserProps) {
+    super(props);
   }
 
   public updateFullName(fullName: string): void {
@@ -46,11 +41,11 @@ export class User extends AggregateRoot<UserProps> {
     this.props.phoneNumber = phoneNumber;
   }
 
-  public static create(props: UserProps, id?: UniqueEntityID): Result<User> {
+  public static create(props: UserProps): Result<User> {
     const guardResult = Guard.againstNullOrUndefinedBulk([
       {
-        argument: props.chatId,
-        argumentName: 'chatId',
+        argument: props.id,
+        argumentName: 'id',
       },
     ]);
 
@@ -58,13 +53,10 @@ export class User extends AggregateRoot<UserProps> {
       return Result.fail<User>(guardResult.message ?? '');
     }
 
-    const client = new User(
-      {
-        ...props,
-        isActive: props.isActive ? props.isActive : true,
-      },
-      id,
-    );
+    const client = new User({
+      ...props,
+      isActive: props.isActive ? props.isActive : true,
+    });
 
     return Result.ok<User>(client);
   }
