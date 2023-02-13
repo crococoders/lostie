@@ -1,35 +1,23 @@
 import { Either, left, Result, right } from '../../../shared/core/Result';
 import { User, UserProps } from '../domain/User';
-import { UserRepo } from '../repos/userRepo';
+import { IUserRepo } from '../repos/userRepo';
 import { CreateUserDTO } from './CreateUserDTO';
-import { CreateUserErrors } from './CreateUserErrors';
+// import { CreateUserErrors } from './CreateUserErrors';
 import { UnexpectedError } from '../../../shared/core/AppError';
 
 type Response = Either<UnexpectedError | Result<any>, Result<void>>;
 
 export class CreateUser {
-  private userRepo: UserRepo;
+  private userRepo: IUserRepo;
 
-  constructor(userRepo: UserRepo) {
+  constructor(userRepo: IUserRepo) {
     this.userRepo = userRepo;
   }
 
   public async execute(dto: CreateUserDTO): Promise<Response> {
-    let exists: boolean;
-
-    try {
-      exists = await this.userRepo.chatIdExists(dto.chatId);
-    } catch (error) {
-      return left(new UnexpectedError(error));
-    }
-
-    if (exists) {
-      return left(new CreateUserErrors.UserAlreadyExistsError());
-    }
-
     try {
       const userProps: UserProps = {
-        chatId: dto.chatId,
+        id: dto.userId,
         fullName: dto.fullName,
         phoneNumber: dto.phoneNumber,
       };
