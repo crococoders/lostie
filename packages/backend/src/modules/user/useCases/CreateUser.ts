@@ -2,10 +2,9 @@ import { Either, left, Result, right } from '../../../shared/core/Result';
 import { User, UserProps } from '../domain/User';
 import { IUserRepo } from '../repos/userRepo';
 import { CreateUserDTO } from './CreateUserDTO';
-// import { CreateUserErrors } from './CreateUserErrors';
 import { UnexpectedError } from '../../../shared/core/AppError';
 
-type Response = Either<UnexpectedError | Result<any>, Result<void>>;
+export type CreateUserResponse = Either<UnexpectedError | Result<any>, Result<void>>;
 
 export class CreateUser {
   private userRepo: IUserRepo;
@@ -14,7 +13,7 @@ export class CreateUser {
     this.userRepo = userRepo;
   }
 
-  public async execute(dto: CreateUserDTO): Promise<Response> {
+  public async execute(dto: CreateUserDTO): Promise<CreateUserResponse> {
     try {
       const userProps: UserProps = {
         id: dto.userId,
