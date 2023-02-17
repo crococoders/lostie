@@ -19,8 +19,9 @@
   "devDependencies": {
     "@types/express": "^4.17.15",
     "@types/morgan": "^1.9.4",
-    "@types/uuid": "^9.0.0",
     "@types/sequelize": "^4.28.14",
+    "@types/uuid": "^9.0.0",
+    "jest-cucumber": "^3.0.1",
     "nodemon": "^2.0.20",
     "sequelize-cli": "^6.5.2",
     "ts-node": "^10.9.1",
@@ -29,9 +30,9 @@
   "dependencies": {
     "express": "^4.18.2",
     "morgan": "^1.10.0",
-    "uuid": "^9.0.0",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "uuid": "^9.0.0"
   }
 }
