@@ -7,7 +7,7 @@ import { Result } from '../../../shared/core/Result';
 export interface UserProps {
   fullName?: string;
   phoneNumber?: UserPhoneNumber;
-  id: string;
+  id?: string;
   isActive?: boolean;
 }
 
@@ -45,7 +45,7 @@ export class User extends AggregateRoot<UserProps> {
     const guardResult = Guard.againstNullOrUndefinedBulk([
       {
         argument: props.id,
-        argumentName: 'id',
+        argumentName: 'user id',
       },
     ]);
 
