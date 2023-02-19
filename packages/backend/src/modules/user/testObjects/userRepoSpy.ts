@@ -31,9 +31,7 @@ export class UserRepoSpy implements IUserRepo {
     return true;
   }
 
-  // eslint-disable-next-line
-  async save(user: User): Promise<void> {
-    console.log(user);
+  async save(_user: User): Promise<void> {
     this.timesSaveCalled++;
   }
 
