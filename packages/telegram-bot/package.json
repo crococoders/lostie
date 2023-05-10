@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/debug": "^4.1.7",
-    "@types/node": "^18.11.18",
+    "@types/node": "^20.1.1",
     "@types/node-fetch": "^2.6.2",
     "env-cmd": "^10.1.0",
     "nodemon": "^2.0.20",
